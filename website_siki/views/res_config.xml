@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_website_siki_settings_instagram" model="ir.ui.view">
+            <field name="name">website_siki.settings_instagram.form</field>
+            <field name="model">website.config.settings</field>
+            <field name="inherit_id" ref="website.view_website_config_settings"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='social']//label[@for='social_github']" position="attributes">
+                    <attribute name="attrs">{'invisible': 1}</attribute>
+                </xpath>
+                <xpath expr="//group[@name='social']//div[@name='social_github']" position="attributes">
+                    <attribute name="attrs">{'invisible': 1}</attribute>
+                </xpath>
+                <xpath expr="//group[@name='social']//label[@for='social_googleplus']" position="attributes">
+                    <attribute name="attrs">{'invisible': 1}</attribute>
+                </xpath>
+                <xpath expr="//group[@name='social']//div[@name='social_googleplus']" position="attributes">
+                    <attribute name="attrs">{'invisible': 1}</attribute>
+                </xpath>
+                <xpath expr="//group[@name='social']//div[@name='social_youtube']" position="after">
+                   <label for="social_instagram"/>
+                   <div name="social_instagram">
+                      <div class="oe_inline">
+                          <field name="social_instagram"  placeholder="https://instagram.com/UserInsta"/>
+                      </div>
+                   </div>
+                   <label for="social_pinterest"/>
+                   <div name="social_pinterest">
+                      <div class="oe_inline">
+                          <field name="social_pinterest"  placeholder="https://Pinterest.com/userPinterest"/>
+                      </div>
+                   </div>
+                   <label for="social_whatsapp"/>
+                   <div name="social_whatsapp">
+                      <div class="oe_inline">
+                          <field name="social_whatsapp"  placeholder="https://wa.me/5211234567890?text=Hola%20quiero%20más%20info" help="FAQ usu Whatsapp entre https://faq.whatsapp.com/es/android/26000030/"/>
+                      </div>
+                       <div class="oe_inline">
+                            <a href="https://faq.whatsapp.com/es/android/26000030/" target="_blank">Uso Whatsapp Clic para Chatear</a>
+                       </div>
+                   </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_website_form_extend" model="ir.ui.view">
+            <field name="name">website.form.extend</field>
+            <field name="model">website</field>
+            <field name="inherit_id" ref="website.view_website_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='social_media']//group[@name='social_media']//field[@name='social_github']" position="attributes">
+                    <attribute name="attrs">{'invisible': 1}</attribute>
+                </xpath><xpath expr="//div[@name='social_media']//group[@name='social_media']//field[@name='social_googleplus']" position="attributes">
+                    <attribute name="attrs">{'invisible': 1}</attribute>
+                </xpath>
+                <xpath expr="//div[@name='social_media']//group[@name='social_media']//field[@name='social_googleplus']" position="after">
+                   <field name="social_instagram"  placeholder="https://instagram.com/userInsta"/>
+                   <field name="social_pinterest"  placeholder="https://Pinterest.com/userPinterest"/>
+                   <field name="social_whatsapp"  placeholder="https://wa.me/5211234567890?text=Hola%20quiero%20más%20info"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
