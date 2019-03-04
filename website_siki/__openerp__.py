@@ -30,5 +30,5 @@ List of modifications:
         'data/data.xml',
     ],
     'installable': True,
-    'auto_install': False,
+    'application': False,
 }
